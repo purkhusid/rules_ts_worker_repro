@@ -1,0 +1,12 @@
+{
+  "ignorePatterns": [
+    "node_modules/",
+    "*.graphql.d.ts",
+    "*.graphqls.d.ts",
+    "schema.json.d.ts"
+  ],
+  "extends": [
+    "plugin:prettier/recommended",
+    "next"
+  ]
+}

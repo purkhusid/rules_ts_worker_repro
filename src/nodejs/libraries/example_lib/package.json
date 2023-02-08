@@ -1,0 +1,5 @@
+{
+  "name": "@monorepo/example_lib",
+  "private": true,
+  "main": "main.js"
+}

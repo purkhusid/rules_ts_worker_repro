@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "composite": true,
+        "importHelpers": true,
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "target": "es5",
+        "baseUrl": ".",
+        "lib": [
+            "esnext",
+            "es2017",
+            "es2019",
+            "dom",
+            "dom.iterable"
+        ],
+    },
+    "exclude": [
+        "**/node_modules",
+        "**/.cache"
+    ],
+    "include": [
+        "**/*.ts",
+        "**/*.tsx"
+    ]
+}
