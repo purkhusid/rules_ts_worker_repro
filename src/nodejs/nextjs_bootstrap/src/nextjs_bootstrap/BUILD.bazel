@@ -1,4 +1,3 @@
-load("@aspect_rules_js//js:defs.bzl", "js_library")
 load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
 
 ts_config(
@@ -6,13 +5,6 @@ ts_config(
     src = "tsconfig.json",
     visibility = ["//src/nodejs/nextjs_bootstrap/src:__subpackages__"],
     deps = [
-        "//src/nodejs:node_modules/@emotion/react",
         "//src/nodejs:tsconfig",
     ],
-)
-
-js_library(
-    name = "jest_config",
-    srcs = ["jest.config.js"],
-    visibility = ["//visibility:public"],
 )

@@ -88,7 +88,6 @@ npm_translate_lock(
         "//src/nodejs:package.json",
         "//src/nodejs:pnpm-lock.yaml",
         "//src/nodejs:pnpm-workspace.yaml",
-        "//src/nodejs/libraries/example_lib:package.json",
     ],
     external_repository_action_cache = "src/nodejs/.aspect/external_repository_action_cache",
     npmrc = "//src/nodejs:.npmrc",

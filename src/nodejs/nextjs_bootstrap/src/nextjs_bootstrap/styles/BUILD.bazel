@@ -1,7 +1,0 @@
-load("@aspect_rules_js//js:defs.bzl", "js_library")
-
-js_library(
-    name = "styles",
-    srcs = glob(["*"]),
-    visibility = ["//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap:__subpackages__"],
-)

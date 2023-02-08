@@ -1,5 +1,4 @@
-load("//internal/macros:ts_project.bzl", "ts_project")
-load("@jest//:defs.bzl", "jest_test")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
 
 ts_project(
     name = "pages",
@@ -15,13 +14,7 @@ ts_project(
     tsconfig = "//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap:tsconfig",
     visibility = ["//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap:__subpackages__"],
     deps = [
-        "//src/nodejs:node_modules/@monorepo/example_lib",
-        "//src/nodejs:node_modules/@types/is-even",
-        "//src/nodejs:node_modules/@types/react",
-        "//src/nodejs:node_modules/@types/react-dom",
-        "//src/nodejs:node_modules/next",
-        "//src/nodejs:node_modules/tslib",
-        "//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap/pages/api",
+        "//src/nodejs:node_modules/@types/node",
     ],
 )
 
@@ -37,24 +30,7 @@ ts_project(
     resolve_json_module = True,
     tsconfig = "//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap:tsconfig",
     deps = [
-        "//src/nodejs:node_modules/@testing-library/jest-dom",
-        "//src/nodejs:node_modules/@testing-library/react",
-        "//src/nodejs:node_modules/@types/jest",
+        "//src/nodejs:node_modules/@types/node",
         "//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap/pages",
     ],
-)
-
-jest_test(
-    name = "jest_test",
-    config = "//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap:jest_config",
-    data = [
-        ":specs",
-        "//src/nodejs:node_modules/is-even",
-        "//src/nodejs:node_modules/jest-environment-jsdom",
-        "//src/nodejs:node_modules/jest-transform-stub",
-        "//src/nodejs:node_modules/react",
-        "//src/nodejs:package_json",
-        "//src/nodejs/nextjs_bootstrap/src/nextjs_bootstrap/styles",
-    ],
-    tags = ["jest"],
 )

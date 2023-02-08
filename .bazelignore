@@ -5,4 +5,3 @@ bazel-bin
 bazel-monorepo
 bazel-testlogs
 src/nodejs/node_modules
-src/nodejs/libraries/example_lib/node_modules
